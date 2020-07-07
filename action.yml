@@ -1,0 +1,16 @@
+name: "Raspberry Pi 4 Rust Builder Action"
+description: "Build rust applications for the Raspberry PI 4"
+author: "Steven Leadbeater <info@ledsysconsultancy.com>"
+inputs:
+  execution_path:
+    description: 'Sub directory in which to execute the action (defaults to the repository root)'
+    required: true
+    default: '.'
+
+branding:
+  icon: "anchor"
+  color: "blue"
+
+runs:
+  using: docker
+  image: docker://albeego/rust-builder-aarch64-action:0.0.1
